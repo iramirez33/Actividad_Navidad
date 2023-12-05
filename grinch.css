@@ -1,0 +1,284 @@
+.reindeer {
+  $base: &;
+  position: absolute;
+  width: 115px;
+  height: 155px;
+  right: 5px;
+  top: 17px;
+  transform: rotate(25deg);
+  z-index: 0;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 65px;
+    left: 76px;
+    width: 8px;
+    height: 31px;
+    background-color: $SLEIGH_COLOR;
+    z-index: 10;
+    transform: rotate(-55deg);
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: #DAA520;
+    z-index: 11;
+    left: 64px;
+    top: 68px;
+    box-shadow: 8px 6px 0 0 #DAA520, 18px 13px 0 0 #DAA520, 26px 18px 0 0 #DAA520;
+  }
+  &__face {
+    position: absolute;
+    width: 30px;
+    height: 22px;
+    top: 44px;
+    left: 72px;
+    border-radius: 10px 10px 50% 50%;
+    transform: rotate(-3deg);
+    background-color: $REINDEER_COLOR;
+    animation: reindeer-face 1.6s linear alternate infinite;
+    &:before {
+      content: "";
+      position: absolute;
+      background-color: $REINDEER_COLOR;
+      width: 29px;
+      height: 16px;
+      border-radius: 50%;
+      top: 0px;
+      left: 11px;
+      transform: rotate(-49deg);
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      background-color: $SLEIGH_COLOR;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      top: -8px;
+      left: 31px;
+    }
+  }
+  &__horn {
+    position: absolute;
+    width: 29px;
+    height: 4px;
+    top: -7px;
+    left: -21px;
+    border-radius: 2px;
+    transform: rotate(38deg);
+    background-color: $REINDEER_HORN_COLOR;
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      background-color: $REINDEER_HORN_COLOR;
+      border-radius: 2px;
+    }
+    &--left {
+      top: -7px;
+      left: -21px;
+      &:before {
+        top: -4px;
+        left: 6px;
+        width: 14px;
+        height: 4px;
+        transform: rotate(43deg);
+      }
+      &:after {
+        top: -4px;
+        left: 13px;
+        width: 14px;
+        height: 4px;
+        -webkit-transform: rotate(43deg);
+        transform: rotate(53deg);
+      }
+    }
+    &--right {
+      top: -12px;
+      left: -6px;
+      width: 24px;
+      transform: rotate(62deg);
+      &:before {
+        top: -3px;
+        left: 5px;
+        width: 10px;
+        height: 4px;
+        transform: rotate(43deg);
+      }
+      &:after {
+        top: -3px;
+        left: 11px;
+        width: 10px;
+        height: 4px;
+        transform: rotate(53deg);
+      }
+    }
+  }
+  &__ear {
+    position: absolute;
+    width: 21px;
+    height: 11px;
+    top: 4px;
+    left: -18px;
+    border-radius: 4px 0 50% 50%;
+    transform: rotate(4deg);
+    background-color: $REINDEER_COLOR;
+    &:before {
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: 34px;
+      width: 4px;
+      height: 5px;
+      border-radius: 50%;
+      transform: rotate(-35deg);
+      background-color: #000;
+    }
+  }
+  &__body {
+    position: absolute;
+    width: 58px;
+    height: 31px;
+    top: 84px;
+    left: 28px;
+    border-radius: 50% 0;
+    transform: rotate(-3deg);
+    background-color: $REINDEER_COLOR;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 46px;
+      height: 26px;
+      top: -15px;
+      left: 32px;
+      border-radius: 0 0 50% 50%;
+      -webkit-transform: rotate(-3deg);
+      transform: rotate(-55deg);
+      background-color: $REINDEER_COLOR;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      width: 43px;
+      height: 26px;
+      top: -11px;
+      left: 29px;
+      border-radius: 0 0 50% 50%;
+      -webkit-transform: rotate(-3deg);
+      transform: rotate(-30deg);
+      background-color: $REINDEER_COLOR;
+    }
+  }
+  &__foot {
+    &-inner {
+      position: absolute;
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+      }
+    }
+    &--inside {
+      z-index: 2;
+      transform: rotate(-12deg) translate(3px, 0px);
+    }
+    &--front {
+      #{$base}__foot-inner {
+        width: 40px;
+        height: 8px;
+        top: 13px;
+        left: 35px;
+        border-radius: 0 50%;
+        transform: rotate(-17deg);
+        transform-origin: center;
+        background-color: $REINDEER_COLOR;
+        animation: reindeer-front 1.6s linear alternate infinite;
+        &:before {
+          width: 28px;
+          height: 8px;
+          top: 0px;
+          left: 37px;
+          border-radius: 2px 50%;
+          transform: rotate(131deg);
+          background-color: $REINDEER_COLOR;
+          animation: reindeer-front-ext 1.7s linear alternate infinite;
+        }
+        &:after {
+          width: 8px;
+          height: 9px;
+          top: 27px;
+          left: 32px;
+          border-radius: 2px;
+          transform: rotate(131deg);
+          background-color: #362514;
+          animation: reindeer-front-ext-hoof 1.7s linear alternate infinite;
+        }
+      }
+    }
+    &--back {
+      #{$base}__foot-inner {
+        width: 56px;
+        height: 9px;
+        top: 35px;
+        left: -29px;
+        border-radius: 0 50%;
+        transform: rotate(-73deg);
+        background-color: $REINDEER_COLOR;
+        animation: reindeer-back 1.7s linear alternate infinite;
+        &:before {
+          width: 25px;
+          height: 16px;
+          top: 4px;
+          left: 25px;
+          border-radius: 0 50%;
+          transform: rotate(15deg);
+          background-color: $REINDEER_COLOR;
+        }
+        &:after {
+          width: 8px;
+          height: 9px;
+          top: -2px;
+          left: -2px;
+          border-radius: 2px 0 2px 2px;
+          transform: rotate(14deg);
+          background-color: #362514;
+        }
+      }
+    }
+  }
+  &__tail {
+    position: absolute;
+    width: 27px;
+    height: 26px;
+    top: 6px;
+    left: -8px;
+    border-radius: 50% 2px;
+    transform: rotate(-17deg);
+    background-color: $REINDEER_COLOR;
+    &:before {
+      content: "";
+      position: absolute;
+      background-color: $REINDEER_COLOR;
+      border-radius: 50%;
+      top: -2px;
+      left: -3px;
+      width: 15px;
+      height: 5px;
+      transform: rotate(25deg);
+    }
+  }
+  &__spots {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    top: 6px;
+    left: 8px;
+    border-radius: 50% 2px;
+    background-color: $REINDEER_HORN_COLOR;
+    box-shadow: 5px 5px 0 0 $REINDEER_HORN_COLOR, -5px 5px 0 0 $REINDEER_HORN_COLOR;
+  }
+}
