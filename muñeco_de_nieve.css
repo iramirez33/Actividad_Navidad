@@ -1,0 +1,155 @@
+body{
+  background-color: blue;
+}
+
+#relativo{
+  position: relative;
+  margin: 0 auto;
+  width: 500px;
+  height: 500px;
+  border: thin solid black;
+}
+
+/*Head*/
+
+.cabeza{
+    width: 80px;
+    height: 80px;
+    position:absolute;
+    margin:90px auto;
+    left: 0px;
+    right: 0px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    z-index:-2;
+}
+
+.gorro{
+  width: 0;
+  height: 0;
+  position:absolute;
+  left: 220px;
+  top: 15px;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 80px solid rgb(238, 4, 4);
+  z-index:-2;
+}
+
+.ponpon{
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  border-radius: 20px;
+  background: white;
+  top: 4px;
+  left: 13px;
+  margin-top: 10px;
+  margin-left: 230px;
+  z-index:-1;
+}
+
+.nariz{
+  
+}
+
+#ojo1{
+  height: 12px;
+  width: 12px;
+  position: absolute;
+  border-radius: 20px;
+  background: black;
+  top: 100px;
+  margin-top: 10px;
+  margin-left: 230px;
+  z-index:-1;
+}
+
+#ojo2{
+  height: 12px;
+  width: 12px;
+  position: absolute;
+  border-radius: 20px;
+  background: black;
+  top: 100px;
+  margin-top: 10px;
+  margin-left: 260px;
+  z-index:-1;
+}
+
+/*Cuerpo*/
+
+.torso{
+  width: 135px;
+  height: 135px;
+  position:absolute;
+  margin:-30px auto;
+  left: 0px;
+  right: 0px;
+  border-radius: 50%;
+  top:200px;
+  z-index:-1;
+  background-color: white;
+}
+
+.brazo1{
+  width: 15px;
+  height: 90px;
+  z-index:-2;
+  position:absolute;
+  margin:100px auto;
+  left: 155px;
+  top: 100px;
+  border-radius: 50px 0px 50px 50px;
+  transform: rotate(45deg);
+  background-color: brown;
+}
+
+.brazo2{
+  width: 15px;
+  height: 90px;
+  background: brown;
+  z-index:-2;
+  position: absolute;
+  margin: 100px auto;
+  right: 150px;
+  top: 100px;;
+  border-radius: 50px 0px 50px 50px;
+  transform: rotate(-50deg);
+}
+
+.boton1{
+  height: 7px;
+  width: 7px;
+  position: absolute;
+  border-radius: 20px;
+  background: black;
+  top: 250px;
+  margin-top: 10px;
+  margin-left: 250px;
+  z-index:-1;
+}
+
+.boton2{
+  height: 7px;
+  width: 7px;
+  position: absolute;
+  border-radius: 20px;
+  background: black;
+  top: 220px;
+  margin-top: 10px;
+  margin-left: 250px;
+  z-index:-1;
+}
+
+.boton3{
+  height: 7px;
+  width: 7px;
+  position: absolute;
+  border-radius: 20px;
+  background: black;
+  top: 190px;
+  margin-top: 10px;
+  margin-left: 250px;
+  z-index:-1;
+}
